@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/esquemas.png" type="image/x-icon" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Carrega o Htlm2Canvas, utilizado para transformar <div></div> em imagem -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <title>Carregar imagem</title>
+  </head>
+  <body>
+    <div id="form_total">
+      <h1>Escolha as Imagens</h1>
+      <div id="divCabec">
+        <img src="img/imgCabecalhoLaudo.png" id="cabecalho" />
+        <img src="img/imgCabecalhoLaudoIcon.png" id="cabecalhoIcon" />
+        <form class="form-upload">
+          <label for="img1" class="input-personalizado">
+            <img src="img/Ultrasis.jpg" class="imagem" id="img1_img" />
+            <input type="file" class="input-file" accept="image/*" id="img1" />
+          </label>
+        </form>
+        <form class="form-upload">
+          <label for="img2" class="input-personalizado">
+            <img src="img/Ultrasis.jpg" class="imagem" id="img2_img" />
+            <input type="file" class="input-file" accept="image/*" id="img2" />
+          </label>
+        </form>
+        <form class="form-upload">
+          <label for="img3" class="input-personalizado">
+            <img src="img/Ultrasis.jpg" class="imagem" id="img3_img" />
+            <input type="file" class="input-file" accept="image/*" id="img3" />
+          </label>
+        </form>
+        <form class="form-upload">
+          <label for="img4" class="input-personalizado">
+            <img src="img/Ultrasis.jpg" class="imagem" id="img4_img" />
+            <input type="file" class="input-file" accept="image/*" id="img4" />
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <label for="imgCabecalhoLaudo">
+        <input
+          type="radio"
+          id="imgCabecalhoLaudo"
+          name="opcao"
+          value="imgCabecalhoLaudo"
+          checked
+        />
+        <img src="img/imgCabecalhoLaudoBtn.png" alt="Opção 1" />
+      </label>
+
+      <label for="imgCabecalhoClinica">
+        <input
+          type="radio"
+          id="imgCabecalhoClinica"
+          name="opcao"
+          value="imgCabecalhoClinica"
+        />
+        <img src="img/imgCabecalhoClinicaBtn.png" alt="Opção 2" />
+      </label>
+
+      <button id="btnDownload">Baixar imagem</button>
+    </div>
+
+    <input type="password" name="" id="test" />
+    <button id="testando">Botão Usado Somente Para Teste</button>
+
+    <div id="result"></div>
+
+    <div id="painel_Dicas">
+      <!-- Painel do Sistema -->
+      <nav class="dp-menu" id="dp-menu"></nav>
+
+      <h2>Digite o Texto Correspondente a Imagem Acima</h2>
+      <div id="textoDigitado" contenteditable="true"></div>
+      <h2>Resultado Final Impresso</h2>
+      <div id="campoPreenchido"></div>
+    </div>
+    <script src="main.js"></script>
+    <script src="TextImg.js"></script>
+  </body>
+</html>
